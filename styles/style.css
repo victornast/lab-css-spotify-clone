@@ -18,10 +18,23 @@ body {
   margin: 0 auto;
 }
 
+ul {
+  padding: 0;
+  list-style: none;
+}
+
 .action-bar {
   display: flex;
-  justify-content: space-around;
+  flex-direction: column;
   align-items: center;
+  padding: 1em 2em;
+}
+
+@media (min-width: 600px) {
+  .action-bar {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 
 .logo-spotify {
@@ -29,37 +42,122 @@ body {
 }
 
 .menu-items {
-  list-style: none;
   display: flex;
-  justify-content: space-evenly;
 }
 
 .menu-items li {
   font-size: 1.5rem;
+}
+
+.menu-items li:not(:first-child) {
   padding-left: 2em;
 }
 
 .hero-image {
   background-image: url('../images/landing.jpg');
   background-size: cover;
-  display: grid;
-  place-items: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  color: #fff;
+  min-height: 32em;
 }
 
-.hero-image h2,
-p {
-  color: #fff;
+@media (min-width: 600px) {
+  .hero-image {
+    min-height: 48em;
+  }
 }
 
 .hero-image h2 {
   font-size: 4.5rem;
   font-weight: normal;
-  padding-top: 2em;
+  color: currentColor;
 }
 
 .hero-image p {
   font-size: 2rem;
-  text-align: center;
   padding-top: 1em;
-  padding-bottom: 8em;
+  color: currentColor;
+}
+
+.advantages-headline {
+  font-size: 2.5rem;
+  text-align: center;
+  margin: 1em 0 2em 0;
+  text-decoration: underline;
+  text-decoration-color: #00b172;
+  text-decoration-thickness: 5px;
+}
+
+.advantages-list {
+  display: flex;
+  justify-content: center;
+}
+
+.advantages-list li {
+  margin: 0 2em;
+  text-align: center;
+  max-width: 22em;
+}
+
+.advantages-list h4 {
+  color: #00b172;
+  font-size: 2rem;
+  margin-top: 0.5em;
+}
+
+.advantages-list p {
+  margin-top: 1em;
+  font-size: 1.75rem;
+}
+
+.advantages-list .icon {
+  height: 6rem;
+}
+
+.main-footer {
+  background-color: #00b172;
+  color: white;
+  padding: 5em;
+  display: flex;
+  justify-content: space-between;
+  background-image: url('../images/spotify-icon-white.png');
+  background-repeat: no-repeat;
+  background-size: 12em;
+  background-position: center;
+}
+
+.play-now h3 {
+  color: white;
+  font-size: 2.5rem;
+  text-decoration: underline;
+  text-decoration-thickness: 5px;
+}
+
+.play-now {
+  max-width: 45%;
+}
+
+.play-now-list li h4 {
+  color: white;
+  font-size: 2rem;
+  margin-top: 1em;
+}
+
+.play-now-list li p {
+  color: white;
+  font-size: 1.5rem;
+  margin-top: 1em;
+}
+
+.sample {
+  flex: 0 0 auto;
+  max-width: 20rem;
+  margin: 3.5rem 0 0 0;
+}
+
+.sample-image {
+  max-width: 100%;
 }
