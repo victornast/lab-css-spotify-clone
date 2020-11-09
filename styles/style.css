@@ -10,7 +10,6 @@ White: #FFF
 * {
   box-sizing: border-box;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color: #1a1a1a;
   margin: 0;
 }
 
@@ -82,6 +81,12 @@ ul {
   color: currentColor;
 }
 
+.avantages {
+  padding: 0 3rem;
+  max-width: 100rem;
+  margin: 0 auto;
+}
+
 .advantages-headline {
   font-size: 2.5rem;
   text-align: center;
@@ -91,15 +96,16 @@ ul {
   text-decoration-thickness: 5px;
 }
 
-.advantages-list {
-  display: flex;
-  justify-content: center;
+@media (min-width: 600px) {
+  .advantages-list {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-gap: 3em;
+  }
 }
 
 .advantages-list li {
-  margin: 0 2em;
   text-align: center;
-  max-width: 22em;
 }
 
 .advantages-list h4 {
@@ -125,12 +131,11 @@ ul {
   justify-content: space-between;
   background-image: url('../images/spotify-icon-white.png');
   background-repeat: no-repeat;
-  background-size: 12em;
+  background-size: 10em;
   background-position: center;
 }
 
 .play-now h3 {
-  color: white;
   font-size: 2.5rem;
   text-decoration: underline;
   text-decoration-thickness: 5px;
@@ -138,16 +143,19 @@ ul {
 
 .play-now {
   max-width: 45%;
+  color: #fff;
+}
+
+.play-now-list {
+  padding-right: 2em;
 }
 
 .play-now-list li h4 {
-  color: white;
   font-size: 2rem;
   margin-top: 1em;
 }
 
 .play-now-list li p {
-  color: white;
   font-size: 1.5rem;
   margin-top: 1em;
 }
@@ -155,7 +163,7 @@ ul {
 .sample {
   flex: 0 0 auto;
   max-width: 20rem;
-  margin: 3.5rem 0 0 0;
+  margin: 2rem 0 0 0;
 }
 
 .sample-image {
